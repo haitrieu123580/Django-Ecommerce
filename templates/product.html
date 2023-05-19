@@ -20,7 +20,7 @@
                 <div class="p-4">
                     <div class="mb-3">
                         <a href="">
-                            <span class="badge bg-dark me-1">{{ object.get_category_display }}</span>
+                            <span class="badge ms-2 {{ item.get_label_display }}">{{ object.get_category_display }}</span>
                         </a>
 {#                        <a href="">#}
 {#                            <span class="badge bg-info me-1">New</span>#}
@@ -43,18 +43,12 @@
 
                     <p>{{ object.item_description }}</p>
 
-                    <form class="d-flex justify-content-left">
-                        <!-- Default input -->
-{#                        <div class="form-outline me-1" style="width: 100px;">#}
-{#                            <input type="number" value="1" class="form-control" />#}
-{#                        </div>#}
-{#                        <button class="btn btn-primary ms-1" type="submit">#}
-{#                            Add to cart#}
-{#                            <i class="fas fa-shopping-cart ms-1"></i>#}
-{#                        </button>#}
-                    </form>
                     <a class="btn btn-primary ms-1" href="{{ object.get_add_to_cart }}">
                             Add to cart
+                            <i class="fas fa-shopping-cart ms-1"></i>
+                    </a>
+                    <a class="btn btn-danger ms-1" href="{{ object.get_remove_from_cart }}">
+                            Remove from cart
                             <i class="fas fa-shopping-cart ms-1"></i>
                     </a>
                 </div>
